@@ -1,7 +1,9 @@
 name: Build Image
 on:
-  release:
-    types: [published]
+  #release:
+  #  types: [published]
+  watch:
+    types: [started]
 jobs:
   build:
       runs-on: ubuntu-latest
@@ -13,7 +15,7 @@ jobs:
             uses: ilteoood/docker_buildx@master
             with:
               publish: true
-              imageName: asdaragon/qiandao # dockerid/imageName
+              imageName: goukey/qiandao # dockerid/imageName
               platform: linux/arm64,linux/amd64 # 你准备构建的镜像平台
               tag: 20200907,latest
               dockerHubUser: ${{ secrets.DOCKER_USERNAME }} # docker hub userid 在setting创建secrets name=DOCKER_USERNAME  value=dockerid
