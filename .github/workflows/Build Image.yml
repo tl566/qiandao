@@ -7,6 +7,7 @@ on:
 jobs:
   build:
       runs-on: ubuntu-latest
+      if: github.event.repository.owner.id == github.event.sender.id
       name: Build image job
       steps:
           - name: Checkout master
