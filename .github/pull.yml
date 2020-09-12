@@ -1,5 +1,0 @@
-version: "1"
-rules:                      
-  - base: master            # 必须。 填写你自己仓库的目标分支
-    upstream: AragonSnow:master    # 必须。 填写你要fork的作者名字:分支
-    mergeMethod: merge  # 可选, 填写[none, merge, squash, rebase, hardreset]其中之一, 建议merge，如果hardreset你的修改将全部丢失。
