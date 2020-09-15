@@ -1,7 +1,6 @@
 name: Build Image
 on:
-  #release:
-  #  types: [published]
+  workflow_dispatch:
   watch:
     types: [started]
 jobs:
