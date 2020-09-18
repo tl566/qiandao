@@ -4,11 +4,8 @@ __操作前请一定要记得备份数据库__<br>
 __操作前请一定要记得备份数据库__<br>
 __操作前请一定要记得备份数据库__<br>
 
-个人项目精力有限，仅保证对Chrome浏览器的支持。如果测试了其他浏览器可以pull request让我修改。
 
-因为需要测试，docker镜像会晚于gitHub几天更新
-
-docker地址：[https://hub.docker.com/r/asdaragon/qiandao](https://hub.docker.com/r/asdaragon/qiandao)
+docker地址：[https://hub.docker.com/r/goukey/qiandao](https://hub.docker.com/r/goukey/qiandao)
 
 docker部署命令：``` docker run -d --name qiandao -p 12345:80 -v $(pwd)/qiandao/config:/usr/src/app/config   asdaragon/qiandao ```
 
