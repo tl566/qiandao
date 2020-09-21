@@ -1,17 +1,43 @@
-# qiandao
+![goukey’s github stats](https://github-readme-stats.vercel.app/api?username=goukey&show_icons=true&theme=vue)
+
+# 签到
 
 __操作前请一定要记得备份数据库__<br>
 __操作前请一定要记得备份数据库__<br>
 __操作前请一定要记得备份数据库__<br>
 
 
-docker地址：[https://hub.docker.com/r/goukey/qiandao](https://hub.docker.com/r/goukey/qiandao)
+docker镜像地址：[https://hub.docker.com/r/goukey/qiandao](https://hub.docker.com/r/goukey/qiandao)
 
-docker部署命令：``` docker run -d --name qiandao -p 12345:80 -v $(pwd)/qiandao/config:/usr/src/app/config   goukey/qiandao ```
+
 
 数据库备份指令：```docker cp 容器名:/usr/src/app/config/database.db . ```
 
 数据库恢复指令：```docker cp database.db 容器名:/usr/src/app/config/ ```
+
+# 部署方式
+
+## docker
+docker部署命令：
+
+``` docker run -d --name qiandao -p 12345:80 -v $(pwd)/qiandao/config:/usr/src/app/config   goukey/qiandao ```
+
+## docker-compose
+docker-compose部署:
+
+```
+version: "3"
+
+services:
+  qiandao:
+    container_name: qiandao
+    image: goukey/qiandao:latest
+    volumes:
+      - 你自己的路径/Qiandao/config:/usr/src/app/config
+    ports:
+      - 12345:80
+    restart: always
+```
 
 ## 2020.09.18 更新
 1. 允许备份/恢复 用户的所有任务和模板
