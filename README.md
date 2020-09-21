@@ -7,7 +7,7 @@ __操作前请一定要记得备份数据库__<br>
 
 docker地址：[https://hub.docker.com/r/goukey/qiandao](https://hub.docker.com/r/goukey/qiandao)
 
-docker部署命令：``` docker run -d --name qiandao -p 12345:80 -v $(pwd)/qiandao/config:/usr/src/app/config   asdaragon/qiandao ```
+docker部署命令：``` docker run -d --name qiandao -p 12345:80 -v $(pwd)/qiandao/config:/usr/src/app/config   goukey/qiandao ```
 
 数据库备份指令：```docker cp 容器名:/usr/src/app/config/database.db . ```
 
